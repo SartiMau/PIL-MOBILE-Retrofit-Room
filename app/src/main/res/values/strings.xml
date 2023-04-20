@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PIL-MOBILE-Retrofit-Room</string>
+
+    <string name="exercises">Exercises!</string>
+
+    <string name="card_id">ID: %1$s</string>
+    <string name="card_is_main">Is main: %1$s</string>
+    <string name="card_status">Status: %1$s</string>
+    <string name="content_description">contentDescription</string>
+</resources>
