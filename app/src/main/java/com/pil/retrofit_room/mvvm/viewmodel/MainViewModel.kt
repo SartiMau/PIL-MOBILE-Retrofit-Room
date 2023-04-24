@@ -20,9 +20,10 @@ class MainViewModel(private val model: MainContract.Model) : ViewModel(), MainCo
         withContext(Dispatchers.IO) { model.getExercises() }.let { result ->
             when (result) {
                 is CoroutineResult.Success -> {
-                    mutableLiveData.value = MainData(MainStatus.SHOW_INFO, result.data.exercises)
+                    mutableLiveData.value = MainData(MainStatus.SHOW_INFO, result.data)
                 }
                 is CoroutineResult.Failure -> {
+                    // TODO: Check what to do here
                 }
             }
         }

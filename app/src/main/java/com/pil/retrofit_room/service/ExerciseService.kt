@@ -2,11 +2,14 @@ package com.pil.retrofit_room.service
 
 import com.pil.retrofit_room.service.model.ExerciseList
 import com.pil.retrofit_room.util.CoroutineResult
-import java.lang.Exception
 
-class ExerciseService(private val client: ExerciseClient) {
+interface ExerciseService {
+    suspend fun getExercises(): CoroutineResult<ExerciseList>
+}
 
-    fun getExercises(): CoroutineResult<ExerciseList> {
+class ExerciseServiceImpl(private val client: ExerciseClient) : ExerciseService {
+
+    override suspend fun getExercises(): CoroutineResult<ExerciseList> {
         try {
             val response = client.getData().execute()
             if (response.isSuccessful) {
