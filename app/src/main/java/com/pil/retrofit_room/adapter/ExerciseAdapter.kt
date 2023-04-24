@@ -27,7 +27,7 @@ class ExerciseAdapter(private val exercises: List<Exercise>) : RecyclerView.Adap
         fun bind(exercise: Exercise) {
             binding.id.text = itemView.context.getString(R.string.card_id, exercise.id.toString())
             binding.isMain.text = itemView.context.getString(R.string.card_is_main, exercise.isMain.toString())
-            binding.status.text = itemView.context.getString(R.string.card_status, exercise.status)
+            binding.licenseAuthor.text = itemView.context.getString(R.string.card_license_author, exercise.licenseAuthor)
 
             Glide.with(itemView.context)
                 .load(exercise.image)

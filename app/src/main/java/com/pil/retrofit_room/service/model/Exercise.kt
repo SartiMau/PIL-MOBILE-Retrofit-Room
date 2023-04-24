@@ -7,8 +7,6 @@ data class Exercise(
     var id: Int,
     @SerializedName("license_author")
     var licenseAuthor: String,
-    @SerializedName("status")
-    var status: String,
     @SerializedName("image")
     var image: String,
     @SerializedName("is_main")

@@ -5,6 +5,6 @@
 
     <string name="card_id">ID: %1$s</string>
     <string name="card_is_main">Is main: %1$s</string>
-    <string name="card_status">Status: %1$s</string>
+    <string name="card_license_author">License author: %1$s</string>
     <string name="content_description">contentDescription</string>
 </resources>
